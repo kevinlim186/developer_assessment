@@ -1,8 +1,8 @@
 # Find My House
 
 Find My House is an angular project used for developer assessment. The following were implemented:
-* a list of all the houses sorted according to their distance to your sisters home in Eberswalder Straße 55. Start w ith the house w ith the low est distance.
-* a list of houses w hich have more then 5 rooms. Start w ith the lowest number of rooms.
+* a list of all the houses sorted according to their distance to your sisters home in Eberswalder Straße 55. Start with the house w ith the lowest distance.
+* a list of houses which have more then 5 rooms. Start with the lowest number of rooms.
 * a list of houses that you do not have all the data for. Sort them by the street-name.
 
 The answer to the question can be determined by filtering the data by distance to the sister's house. Relevant information such as value and rooms are prominently displayed. If you can move with you sister at Eberswalder Straße 55, then this is the best possible answer as this is the house closest to your sister because you will be living together, it has at at least 10 rooms and cost no more than €5M. However, if this is not possible, then the next option would the the house at Danziger Straße 66. This has 12 rooms, and it costs €5M. This house is also the closest house with complete information.

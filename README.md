@@ -1,27 +1,27 @@
-# DeveloperAssessment
+# Find My House
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Find My House is an angular project used for developer assessment. The following were implemented:
+* a list of all the houses sorted according to their distance to your sisters home in Eberswalder Straße 55. Start w ith the house w ith the low est distance.
+* a list of houses w hich have more then 5 rooms. Start w ith the lowest number of rooms.
+* a list of houses that you do not have all the data for. Sort them by the street-name.
 
-## Development server
+The answer to the question can be determined by filtering the data by distance to the sister's house. Relevant information such as value and rooms are prominently displayed. If you can move with you sister at Eberswalder Straße 55, then this is the best possible answer as this is the house closest to your sister because you will be living together, it has at at least 10 rooms and cost no more than €5M. However, if this is not possible, then the next option would the the house at Danziger Straße 66. This has 12 rooms, and it costs €5M. This house is also the closest house with complete information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# User Testing and Deployment
+To test the web application, simply run `ng serve` command. This will route external api requests to a proxy to circumvent Cross-Origin Resource restrictions of browsers. For deployment, this will not be a problem so long as the web application and the api are being served in the same server, otherwise, the backend must be modified to properly respond to the preflight requests of the browser.
 
-## Build
+# Unit Testing
+To unit test the app component, simply run `ng test` command. This will test 4 things:
+* Checks dependencies and imports needed for the component to work.
+* Checks if the h1 tag is 'Our Home'
+* Checks if the degToRad function is correct.
+* Checks if the computed distance is correct using the Haversine formula.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Documentation
+The code is annotated using JSDoc for better understandability. This can be parsed tsdoc parser.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Copyright Issues
+I do not own the background image. This image is available at  [Jeffrey Czum](https://www.pexels.com/photo/four-colourful-houses-2501965/) photo portfolio. According to the licensing policy of Pexel, "Attribution is not required. Giving credit to the photographer or Pexels is not necessary but always appreciated." For further information, please visit the licensing policy website of [Pexel](https://www.pexels.com/photo-license/).

@@ -1,0 +1,42 @@
+<h1 class='mat-headline'>Our Home</h1>
+<div class= 'main'> 
+    <div class='left'>
+        <div class = 'centerAlign'>
+            <mat-form-field class= 'filter'>
+            <mat-label>Show Me Items By</mat-label>
+            <mat-select [(ngModel)]="selectedValue" (selectionChange)="filterData()">
+                <mat-option *ngFor="let value of filter" [value]="value">
+                {{value}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='right'>
+        <div class='centerAlign'>
+            <table mat-table [dataSource]="viewPort" mat-sort class="mat-elevation-z8">
+                <ng-container matColumnDef="Street">
+                    <th mat-header-cell  class="street" *matHeaderCellDef>Street</th>
+                    <td mat-cell class="street" *matCellDef="let element">{{element.street}}</td>
+                </ng-container>
+                
+                <ng-container matColumnDef="Value">
+                    <th mat-header-cell  class="value" *matHeaderCellDef>Value</th>
+                    <td mat-cell class="value" *matCellDef="let element"> {{element.params?.value | currency:'EUR' || ''}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="Rooms">
+                    <th mat-header-cell  class="value" *matHeaderCellDef>Number of Rooms</th>
+                    <td mat-cell class="value" *matCellDef="let element" > {{element.params?.rooms || ''}} </td>
+                </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <div class="paginator">
+                <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons  ng-disabled="ng-reflect-message"></mat-paginator>
+            </div>
+        </div>  
+    </div>
+</div>

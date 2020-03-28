@@ -1,0 +1,87 @@
+table {
+  width: 100%;
+  margin: 0 auto; 
+  align-self: center;
+}
+
+td.value {
+    padding: 3px;
+    font-size: 14px;
+    text-align:center;
+    width: 25%;
+  }
+
+
+td.street {
+    padding: 3px;
+    font-size: 14px;
+    text-align:center;
+    width: 50%;
+  }
+
+th.value {
+    padding: 3px;
+    font-size: 14px;
+    text-align:center;
+    width: 25%;
+  }
+
+
+th.street{
+    padding: 3px;
+    font-size: 14px;
+    text-align:center;
+    width: 50%;
+  }
+
+div.main{
+  min-height: 100vh;
+  min-width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  
+div.left{
+  width: 47%;
+  order: 1;
+  
+}
+
+div.right{
+  width: 47%;
+  order: 2;
+}
+
+.centerAlign{
+  width: 100%;
+  float: center;
+  text-align: center;
+  vertical-align: middle; 
+}
+
+
+::ng-deep .mat-form-field.filter {
+    width: 40%;
+    padding: 20px 80px 20px 80px;
+    background-color: #feda6a;
+    text-align: center;
+}
+
+::ng-deep .mat-option-text{
+  text-align: center;
+}
+
+::ng-deep .mat-headline{
+  width: 100%;
+  min-height: 20vh;
+  position:absolute;
+  top: 10%; 
+  text-align: center;
+  font-size: 500%;
+  vertical-align: middle; 
+}

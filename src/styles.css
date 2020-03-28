@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+    background-image:  url('/../../assets/background.jpg');
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+  }

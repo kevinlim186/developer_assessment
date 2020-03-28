@@ -5,7 +5,7 @@ Find My House is an angular project used for developer assessment. The following
 * a list of houses which have more then 5 rooms. Start with the lowest number of rooms.
 * a list of houses that you do not have all the data for. Sort them by the street-name.
 
-The answer to the question can be determined by filtering the data by distance to the sister's house. Relevant information such as value and rooms are prominently displayed. If you can move with you sister at Eberswalder Straße 55, then this is the best possible answer as this is the house closest to your sister because you will be living together, it has at at least 10 rooms and cost no more than €5M. However, if this is not possible, then the next option would the the house at Danziger Straße 66. This has 12 rooms, and it costs €5M. This house is also the closest house with complete information.
+The answer to the question can be determined by filtering the data by distance to the sister's house. Relevant information such as value and rooms are prominently displayed. If you can move with you sister at Eberswalder Straße 55, then this is the best possible answer. This is the house closest to your sister because you will be living together. The house also meets the other criteria as it has at at least 10 rooms and cost no more than €5M. However, if this is not possible, then the next option would the the house at Danziger Straße 66. This has 12 rooms, and it costs €5M. This house is also the closest house with complete information.
 
 
 

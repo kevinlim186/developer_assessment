@@ -13,10 +13,9 @@ The answer to the question can be determined by filtering the data by distance t
 To test the web application, simply run `ng serve` command. This will route external api requests to a proxy to circumvent Cross-Origin Resource restrictions of browsers. For deployment, this will not be a problem so long as the web application and the api are being served in the same server, otherwise, the backend must be modified to properly respond to the preflight requests of the browser.
 
 # Unit Testing
-To unit test the app component, simply run `ng test` command. This will test 4 things:
+To unit test the app component, simply run `ng test` command. This will test 3 things:
 * Checks dependencies and imports needed for the component to work.
 * Checks if the h1 tag is 'Our Home'
-* Checks if the degToRad function is correct.
 * Checks if the computed distance is correct using the Haversine formula.
 
 

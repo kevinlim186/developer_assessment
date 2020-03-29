@@ -36,6 +36,7 @@ th.street{
 
 div.main{
   min-height: 85vh;
+  max-height: 85vh;
   min-width: auto;
   display: flex;
   flex-direction: row;
@@ -49,13 +50,15 @@ div.main{
 div.left{
   width: 47%;
   order: 1;
-  min-width: 500px;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 div.right{
   width: 47%;
   order: 2;
-  min-width: 500px;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .centerAlign{
@@ -81,11 +84,12 @@ div.right{
   position: absolute;
   width:  100vw;
   text-align: center;
-  font-size: 5em;
+  font-size: 4.5em;
   top: 8%;
   vertical-align: middle; 
 }
 
 div.header{
-  min-height: 15vh;
+  min-height: 150px;
+  max-height: 15vh;
 }

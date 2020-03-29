@@ -49,13 +49,13 @@ div.main{
 div.left{
   width: 47%;
   order: 1;
-  min-width: 500px;
+  min-width: 300px;
 }
 
 div.right{
   width: 47%;
   order: 2;
-  min-width: 500px;
+  min-width: 300px;
 }
 
 .centerAlign{
@@ -81,7 +81,7 @@ div.right{
   position: absolute;
   width:  100vw;
   text-align: center;
-  font-size: 5em;
+  font-size: 4.5em;
   top: 8%;
   vertical-align: middle; 
 }

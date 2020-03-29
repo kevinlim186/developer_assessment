@@ -50,7 +50,7 @@ div.main{
 div.left{
   width: 35%;
   order: 1;
-  min-width: 400px;
+  min-width: 300px;
   padding: 20px 20px 20px 20px;
 }
 
@@ -69,7 +69,7 @@ div.right{
 
 
 ::ng-deep .mat-form-field.filter {
-    min-width: 400px;
+    min-width: 300px;
     font-size: 1.5em;
     text-align: center;
 }

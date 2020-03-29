@@ -92,6 +92,7 @@ export class AppComponent implements OnInit, AfterViewInit {
  */
   filterData() {
     let source = this.houses.slice();
+    this.paginator.pageIndex = 0;
     switch (this.selectedValue) {
 /**
  *

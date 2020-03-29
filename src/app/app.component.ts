@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { House } from './interface';
 import {MatTableDataSource} from '@angular/material/table';
@@ -13,7 +13,7 @@ import { MatPaginator } from '@angular/material';
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
 /**
  *
@@ -60,6 +60,10 @@ export class AppComponent implements OnInit {
   selectedValue = '';
 
   constructor(private http: HttpClient) {}
+  
+  ngAfterViewInit(): void {
+    this.viewPort.paginator = this.paginator;
+  }
 
 /**
  *
@@ -191,5 +195,4 @@ export class AppComponent implements OnInit {
     const theta = 2 * Math.atan2(Math.sqrt(hav), Math.sqrt(1 - hav));
     return theta * earthRadius;
   }
-
 }

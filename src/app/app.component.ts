@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
 /**
  *
- * This is the complete list fetched from the API endpoint. This will be used to reset the viewport as 
+ * This is the complete list fetched from the API endpoint. This will be used to reset the viewport as
  * the user navigates to the different filter option.
  *
  */
@@ -56,15 +56,15 @@ export class AppComponent implements OnInit {
  * The default option is blank, which will show everything.
  *
  */
-  
+
   selectedValue = '';
 
   constructor(private http: HttpClient) {}
 
 /**
  *
- * Initializes table by fetching the from the API rest endpoint. The table is created and paginated. 
- * The api end point is routed through a proxy because the backend server does not allow cross origin 
+ * Initializes table by fetching the from the API rest endpoint. The table is created and paginated.
+ * The api end point is routed through a proxy because the backend server does not allow cross origin
  * site requests.
  *
  */
@@ -81,18 +81,18 @@ export class AppComponent implements OnInit {
  * The filter value is checked. Based on the selected option of the user, the data will be manipulated.
  *
  */
-  filterData(){
+  filterData() {
     let source = this.houses.slice();
-    switch (this.selectedValue){
+    switch (this.selectedValue) {
 /**
  *
- * If the filter value is based on distance from sister's house, the coordinates each house is 
- * computed. This function assumes that the longtitude and latitude are present in all houses 
- * otherwise, as service must be written to get the longitude and latitude. The data is then sorted by 
+ * If the filter value is based on distance from sister's house, the coordinates each house is
+ * computed. This function assumes that the longtitude and latitude are present in all houses
+ * otherwise, as service must be written to get the longitude and latitude. The data is then sorted by
  * distance in ascending order from the house of the sister. The viewport is then updated.
  *
  */
-      case 'Distance from my Sister': 
+      case 'Distance from my Sister':
         const sisterStreet = 'Eberswalder Straße 55';
         const sisterHouse: House = source.filter(item => item.street === sisterStreet)[0];
         const lat1 = sisterHouse.coords.lat;
@@ -112,7 +112,7 @@ export class AppComponent implements OnInit {
         break;
 /**
  *
- * If the filter value is based on number of rooms, items with undefined params are removed then it is 
+ * If the filter value is based on number of rooms, items with undefined params are removed then it is
  * subsequently filtered by the number indicated in the specification. It is then sorted in ascending
  * order based on number of rooms. The viewport is then updated.
  *
@@ -124,20 +124,20 @@ export class AppComponent implements OnInit {
                           const x = a.params.rooms;
                           const y = b.params.rooms;
                           return x < y ? -1 : x > y ? 1 : 0;
-                        })
+                        });
         this.viewPort =  new MatTableDataSource(source);
         this.viewPort.paginator = this.paginator;
         break;
 
 /**
  *
- * If the filter value is based on number of rooms, items with undefined will be checked for any 
- * undefined attributes. It is then sorted by street name in ascending order. Lastly, the view port is 
+ * If the filter value is based on number of rooms, items with undefined will be checked for any
+ * undefined attributes. It is then sorted by street name in ascending order. Lastly, the view port is
  * updated
  *
  */
       case 'Missing Information':
-        console.log('Missing Information')
+        console.log('Missing Information');
         source = source .filter(item => (item.params === undefined ||
                                 item.params.value === undefined ||
                                 item.params.rooms === undefined ||
@@ -181,8 +181,8 @@ export class AppComponent implements OnInit {
  * @returns The distance in Kilometer of the first and second location.
  *
  */
-  getDistance(lat1: number, lat2: number, long1: number, long2: number){
-    const earthRadius = 6371; //in KM
+  getDistance(lat1: number, lat2: number, long1: number, long2: number) {
+    const earthRadius = 6371; // in KM
     const latDiff = this.degToRad(lat1 - lat2);
     const longDiff = this.degToRad(long1 - long2);
     const hav =   Math.sin(latDiff / 2) * Math.sin(latDiff / 2) +

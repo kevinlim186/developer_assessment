@@ -20,7 +20,7 @@ To unit test the app component, simply run `ng test` command. This will test 3 t
 
 
 # Documentation
-The code is annotated using JSDoc for better understandability. This can be parsed tsdoc parser.
+The code is annotated using JSDoc for better understandability. This can be parsed using tsdoc parser.
 
 # Copyright Issues
 I do not own the background image. This image is available at  [Jeffrey Czum](https://www.pexels.com/photo/four-colourful-houses-2501965/) photo portfolio. According to the licensing policy of Pexel, "Attribution is not required. Giving credit to the photographer or Pexels is not necessary but always appreciated." For further information, please visit the licensing policy website of [Pexel](https://www.pexels.com/photo-license/).

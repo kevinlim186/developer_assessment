@@ -48,14 +48,14 @@ div.main{
 
   
 div.left{
-  width: 47%;
+  width: 35%;
   order: 1;
-  min-width: 300px;
+  min-width: 400px;
   padding: 20px 20px 20px 20px;
 }
 
 div.right{
-  width: 47%;
+  width: 60%;
   order: 2;
   min-width: 300px;
 }
@@ -69,9 +69,8 @@ div.right{
 
 
 ::ng-deep .mat-form-field.filter {
-    width: 40%;
-    padding: 20px 80px 20px 80px;
-    background-color: #feda6a;
+    min-width: 400px;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -88,16 +87,22 @@ div.right{
   vertical-align: middle;  
   font: url('/../../assets/Archivo-Bold.ttf');
   font-weight: bold;
+  color: #9C907F;
   text-shadow: 0 1px 2px rgba(black,.15);
   text-transform: uppercase;
 }
 
 div.header{
-  min-height: 150px;
+  min-height: 120px;
   max-height: 15vh;
 }
 
 div.footer{
   min-height: 150px;
   max-height: 15vh;
+}
+
+hr{
+  border-top: 3px solid #9C907F;
+  width: 60%;
 }

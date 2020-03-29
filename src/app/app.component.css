@@ -35,7 +35,7 @@ th.street{
   }
 
 div.main{
-  min-height: 100vh;
+  min-height: 80vh;
   min-width: auto;
   display: flex;
   flex-direction: row;
@@ -49,12 +49,13 @@ div.main{
 div.left{
   width: 47%;
   order: 1;
-  
+  min-width: 500px;
 }
 
 div.right{
   width: 47%;
   order: 2;
+  min-width: 500px;
 }
 
 .centerAlign{
@@ -77,11 +78,15 @@ div.right{
 }
 
 ::ng-deep .mat-headline{
+  position: absolute;
   width: 100%;
-  min-height: 20vh;
-  position:absolute;
-  top: 10%; 
   text-align: center;
   font-size: 500%;
+  top: 8%;
   vertical-align: middle; 
+}
+
+div.header{
+  vertical-align: middle; 
+  min-height: 160px;
 }

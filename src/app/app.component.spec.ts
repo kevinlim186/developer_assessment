@@ -41,15 +41,6 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Our Home');
   });
 
-  it('Check for conversion of degree To Rad', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const component = fixture.componentInstance;
-
-    const result = component.degToRad(360);
-    const expected = 360 * Math.PI / 180;
-
-    expect(result).toBe(expected);
-  });
 
   it('Check for computation of distance', () => {
     const fixture = TestBed.createComponent(AppComponent);
